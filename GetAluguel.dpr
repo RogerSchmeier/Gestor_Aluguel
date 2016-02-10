@@ -2,13 +2,13 @@ program GetAluguel;
 
 uses
   Vcl.Forms,
-  unitPrincipal in 'unitPrincipal.pas' {Form1};
+  unitPrincipal in 'unitPrincipal.pas' {frmPrincipal};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.Run;
 end.
