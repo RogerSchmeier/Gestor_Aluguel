@@ -90,7 +90,7 @@
 				<FormType>dfm</FormType>
 			</DCCReference>
 			<DCCReference Include="unitDM.pas">
-				<Form>DataModule1</Form>
+				<Form>DM</Form>
 				<FormType>dfm</FormType>
 				<DesignClass>TDataModule</DesignClass>
 			</DCCReference>
