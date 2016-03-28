@@ -16,6 +16,7 @@ type
     PanelRel: TPanel;
     Relatrios1: TMenuItem;
     Label1: TLabel;
+    procedure Imvel1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -28,5 +29,12 @@ var
 implementation
 
 {$R *.dfm}
+
+uses unitDM, unitImovel;
+
+procedure TfrmPrincipal.Imvel1Click(Sender: TObject);
+begin
+  frmImovel.ShowModal;
+end;
 
 end.

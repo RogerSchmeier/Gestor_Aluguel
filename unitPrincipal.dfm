@@ -58,6 +58,7 @@ object frmPrincipal: TfrmPrincipal
     end
     object Imvel1: TMenuItem
       Caption = 'Im'#243'vel'
+      OnClick = Imvel1Click
     end
     object Relatrios1: TMenuItem
       Caption = 'Relat'#243'rios'
