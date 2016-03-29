@@ -34,7 +34,8 @@ uses unitDM, unitImovel;
 
 procedure TfrmPrincipal.Imvel1Click(Sender: TObject);
 begin
-  frmImovel.ShowModal;
+  frmImovel:= TfrmImovel.Create(self);
+  frmImovel.Show;
 end;
 
 end.
