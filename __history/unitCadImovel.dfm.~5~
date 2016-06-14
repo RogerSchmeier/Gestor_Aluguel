@@ -1,0 +1,81 @@
+object frmCadImovel: TfrmCadImovel
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Cadastro de Im'#243'veis'
+  ClientHeight = 276
+  ClientWidth = 712
+  Color = clWhite
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsMDIChild
+  OldCreateOrder = False
+  Position = poScreenCenter
+  Visible = True
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 18
+    Top = 8
+    Width = 80
+    Height = 13
+    Caption = 'Numero Da Casa'
+  end
+  object Label2: TLabel
+    Left = 18
+    Top = 61
+    Width = 19
+    Height = 13
+    Caption = 'Rua'
+  end
+  object Label3: TLabel
+    Left = 264
+    Top = 5
+    Width = 115
+    Height = 13
+    Caption = 'Descri'#231#227'o e Refer'#234'ncias'
+  end
+  object edtNumero: TDBEdit
+    Left = 18
+    Top = 24
+    Width = 200
+    Height = 21
+    ParentColor = True
+    TabOrder = 0
+  end
+  object edtRua: TDBEdit
+    Left = 17
+    Top = 80
+    Width = 200
+    Height = 21
+    TabOrder = 1
+  end
+  object memoReferencias: TDBMemo
+    Left = 264
+    Top = 24
+    Width = 433
+    Height = 233
+    TabOrder = 2
+  end
+  object btnSalvar: TBitBtn
+    Left = 17
+    Top = 117
+    Width = 200
+    Height = 75
+    Caption = 'Salvar'
+    TabOrder = 3
+  end
+  object btnCancelar: TBitBtn
+    Left = 18
+    Top = 198
+    Width = 200
+    Height = 75
+    Caption = 'Cancelar'
+    TabOrder = 4
+  end
+end

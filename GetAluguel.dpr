@@ -4,7 +4,12 @@ uses
   Vcl.Forms,
   unitPrincipal in 'unitPrincipal.pas' {frmPrincipal},
   unitDM in 'unitDM.pas' {DM: TDataModule},
-  unitImovel in 'unitImovel.pas' {frmImovel};
+  unitImovel in 'unitImovel.pas' {frmImovel},
+  Vcl.Themes,
+  Vcl.Styles,
+  unitCadImovel in 'unitCadImovel.pas' {frmCadImovel},
+  unitCadLocatario in 'unitCadLocatario.pas' {frmCadLocatario},
+  unitLocatario in 'unitLocatario.pas' {frmlocatario};
 
 {$R *.res}
 
@@ -14,4 +19,5 @@ begin
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
   Application.CreateForm(TDM, DM);
   Application.Run;
+
 end.

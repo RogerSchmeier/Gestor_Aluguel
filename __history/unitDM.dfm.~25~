@@ -1,0 +1,109 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 385
+  Width = 531
+  object FDConexao: TFDConnection
+    Params.Strings = (
+      'User_Name=root'
+      'Password=naotemsenha'
+      'Database=getaluguel'
+      'Server=127.0.0.1'
+      'DriverID=MySQL')
+    Connected = True
+    LoginPrompt = False
+    Left = 56
+    Top = 24
+  end
+  object FDPMysql: TFDPhysMySQLDriverLink
+    VendorLib = 'C:\sistemas\Gestor_Aluguel\app\libmysql.dll'
+    Left = 56
+    Top = 160
+  end
+  object QImovel: TFDQuery
+    Active = True
+    Connection = FDConexao
+    SQL.Strings = (
+      'select * from Imovel')
+    Left = 344
+    Top = 192
+    object QImovelid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object QImovelnumero: TIntegerField
+      AutoGenerateValue = arDefault
+      FieldName = 'numero'
+      Origin = 'numero'
+    end
+    object QImovelrua: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'rua'
+      Origin = 'rua'
+      Size = 100
+    end
+    object QImovelreferencia: TMemoField
+      AutoGenerateValue = arDefault
+      FieldName = 'referencia'
+      Origin = 'referencia'
+      BlobType = ftMemo
+    end
+  end
+  object dsImovel: TDataSource
+    DataSet = tblLocatario
+    Left = 344
+    Top = 256
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 56
+    Top = 96
+  end
+  object tblLocatario: TFDQuery
+    Active = True
+    Connection = FDConexao
+    SQL.Strings = (
+      'select * from locatario')
+    Left = 416
+    Top = 192
+    object tblLocatarioid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+    end
+    object tblLocatarionome: TStringField
+      FieldName = 'nome'
+      Origin = 'nome'
+      Required = True
+      Size = 100
+    end
+    object tblLocatariocpf: TLargeintField
+      AutoGenerateValue = arDefault
+      FieldName = 'cpf'
+      Origin = 'cpf'
+    end
+    object tblLocatariorg: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'rg'
+      Origin = 'rg'
+      Size = 10
+    end
+    object tblLocatarionascimento: TDateField
+      AutoGenerateValue = arDefault
+      FieldName = 'nascimento'
+      Origin = 'nascimento'
+      EditMask = '99/!99/0000;1;_'
+    end
+    object tblLocatariosexo: TBooleanField
+      AutoGenerateValue = arDefault
+      FieldName = 'sexo'
+      Origin = 'sexo'
+    end
+  end
+  object dsLocatario: TDataSource
+    DataSet = tblLocatario
+    Left = 416
+    Top = 256
+  end
+end

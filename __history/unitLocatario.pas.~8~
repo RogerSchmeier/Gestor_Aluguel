@@ -1,0 +1,52 @@
+unit unitLocatario;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, unitImovel, Data.DB, Vcl.StdCtrls,
+  Vcl.ExtCtrls, Vcl.Buttons, Vcl.Grids, Vcl.DBGrids;
+
+type
+  Tfrmlocatario = class(TfrmImovel)
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure btnNovoClick(Sender: TObject);
+    procedure btnSairClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmlocatario: Tfrmlocatario;
+
+implementation
+
+{$R *.dfm}
+
+uses unitDM, unitCadImovel, unitCadLocatario, unitPrincipal;
+
+procedure Tfrmlocatario.btnNovoClick(Sender: TObject);
+begin
+if frmCadLocatario=nil then
+  frmCadLocatario:=TfrmCadLocatario.Create(self);
+  frmCadLocatario.Show;
+   dm.tblLocatario.Append;
+
+end;
+
+procedure Tfrmlocatario.btnSairClick(Sender: TObject);
+begin
+ close;
+
+end;
+
+procedure Tfrmlocatario.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+
+action:=caFree;
+frmlocatario:=nil;
+end;
+
+end.

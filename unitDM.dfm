@@ -1,75 +1,111 @@
 object DM: TDM
   OldCreateOrder = False
-  Height = 341
-  Width = 379
-  object SQLConnection1: TSQLConnection
-    ConnectionName = 'GETALUGUEL'
-    DriverName = 'MYSQL'
-    GetDriverFunc = 'getSQLDriverMYSQL'
-    LibraryName = 'dbxmys.dll'
-    LoginPrompt = False
+  Height = 385
+  Width = 531
+  object FDConexao: TFDConnection
     Params.Strings = (
-      'drivername=MYSQL'
-      'librarynameosx=libsqlmys.dylib'
-      'vendorlibwin64=libmysql.dll'
-      'vendorlibosx=libmysqlclient.dylib'
-      'blobsize=-1'
-      'database=getaluguel'
-      'hostname=127.0.0.1'
-      'localecode=0000'
-      'password=naotemsenha'
-      'user_name=root'
-      'compressed=False'
-      'encrypted=False')
-    VendorLib = 'LIBMYSQL.dll'
+      'User_Name=root'
+      'Password=naotemsenha'
+      'Database=getaluguel'
+      'Server=127.0.0.1'
+      'DriverID=MySQL')
     Connected = True
-    Left = 8
-    Top = 8
+    LoginPrompt = False
+    Left = 64
+    Top = 24
   end
-  object DSImovel: TSQLDataSet
-    Active = True
-    CommandText = 'select * from `imovel`'
-    DbxCommandType = 'Dbx.SQL'
-    MaxBlobSize = 1
-    Params = <>
-    SQLConnection = SQLConnection1
-    Left = 14
-    Top = 80
+  object FDPMysql: TFDPhysMySQLDriverLink
+    VendorLib = 'C:\sistemas\Gestor_Aluguel\app\libmysql.dll'
+    Left = 56
+    Top = 160
   end
-  object CDSImovel: TClientDataSet
+  object QImovel: TFDQuery
     Active = True
-    Aggregates = <>
-    Params = <>
-    ProviderName = 'DSPImovel'
-    Left = 16
+    Connection = FDConexao
+    SQL.Strings = (
+      'select * from Imovel')
+    Left = 344
     Top = 192
-    object CDSImovelid: TIntegerField
+    object QImovelid: TFDAutoIncField
       FieldName = 'id'
-      Required = True
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
-    object CDSImovelnumero: TFMTBCDField
+    object QImovelnumero: TIntegerField
+      AutoGenerateValue = arDefault
       FieldName = 'numero'
-      Precision = 6
-      Size = 0
+      Origin = 'numero'
     end
-    object CDSImovelrua: TStringField
+    object QImovelrua: TStringField
+      AutoGenerateValue = arDefault
       FieldName = 'rua'
+      Origin = 'rua'
       Size = 100
     end
-    object CDSImovelreferencia: TMemoField
+    object QImovelreferencia: TStringField
+      AutoGenerateValue = arDefault
       FieldName = 'referencia'
-      BlobType = ftMemo
-      Size = 1
+      Origin = 'referencia'
+      Size = 255
     end
   end
-  object DSPImovel: TDataSetProvider
-    DataSet = DSImovel
-    Left = 16
-    Top = 136
+  object dsImovel: TDataSource
+    DataSet = QImovel
+    Left = 344
+    Top = 256
   end
-  object DataImovel: TDataSource
-    DataSet = CDSImovel
-    Left = 24
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 56
+    Top = 96
+  end
+  object tblLocatario: TFDQuery
+    Active = True
+    Connection = FDConexao
+    SQL.Strings = (
+      'select * from locatario')
+    Left = 416
+    Top = 192
+    object tblLocatarioid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object tblLocatarionome: TStringField
+      FieldName = 'nome'
+      Origin = 'nome'
+      Required = True
+      Size = 100
+    end
+    object tblLocatariocpf: TLargeintField
+      AutoGenerateValue = arDefault
+      FieldName = 'cpf'
+      Origin = 'cpf'
+    end
+    object tblLocatariorg: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'rg'
+      Origin = 'rg'
+      Size = 10
+    end
+    object tblLocatarionascimento: TDateField
+      AutoGenerateValue = arDefault
+      FieldName = 'nascimento'
+      Origin = 'nascimento'
+      EditMask = '99/!99/0000;1;_'
+    end
+    object tblLocatariosexo: TStringField
+      AutoGenerateValue = arDefault
+      FieldName = 'sexo'
+      Origin = 'sexo'
+      Size = 50
+    end
+  end
+  object dsLocatario: TDataSource
+    DataSet = tblLocatario
+    Left = 416
     Top = 256
   end
 end

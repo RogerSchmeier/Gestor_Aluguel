@@ -2,14 +2,27 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2016/02/10 20:13:23.000.004,=C:\Users\Roger\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2016/02/10 20:14:01.000.800,C:\sistemas\Gestor_Aluguel\unitPrincipal.pas=C:\Users\Roger\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2016/02/10 20:14:01.000.800,C:\sistemas\Gestor_Aluguel\unitPrincipal.dfm=C:\Users\Roger\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2016/02/10 20:14:11.000.526,C:\sistemas\Gestor_Aluguel\GetAluguel.dproj=C:\Users\Roger\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2016/02/10 20:14:01.000.800,C:\Users\Roger\Documents\RAD Studio\Projects\Unit1.pas=C:\sistemas\Gestor_Aluguel\unitPrincipal.pas</Transaction>
+    <Transaction>2016/02/10 20:14:01.000.800,C:\Users\Roger\Documents\RAD Studio\Projects\Unit1.dfm=C:\sistemas\Gestor_Aluguel\unitPrincipal.dfm</Transaction>
+    <Transaction>2016/02/10 20:14:11.000.526,C:\Users\Roger\Documents\RAD Studio\Projects\Project1.dproj=C:\sistemas\Gestor_Aluguel\GetAluguel.dproj</Transaction>
     <Transaction>2016/03/04 21:53:35.000.090,=C:\sistemas\Gestor_Aluguel\Unit1.pas</Transaction>
-    <Transaction>2016/03/04 21:53:50.000.898,C:\sistemas\Gestor_Aluguel\Unit1.pas=C:\sistemas\Gestor_Aluguel\unitDM.pas</Transaction>
-    <Transaction>2016/03/04 21:53:50.000.898,C:\sistemas\Gestor_Aluguel\Unit1.dfm=C:\sistemas\Gestor_Aluguel\unitDM.dfm</Transaction>
+    <Transaction>2016/03/04 21:53:50.000.898,C:\sistemas\Gestor_Aluguel\unitDM.pas=C:\sistemas\Gestor_Aluguel\Unit1.pas</Transaction>
+    <Transaction>2016/03/04 21:53:50.000.898,C:\sistemas\Gestor_Aluguel\unitDM.dfm=C:\sistemas\Gestor_Aluguel\Unit1.dfm</Transaction>
     <Transaction>2016/03/28 16:31:55.000.094,=C:\sistemas\Gestor_Aluguel\Unit1.pas</Transaction>
-    <Transaction>2016/03/28 16:33:06.000.768,C:\sistemas\Gestor_Aluguel\Unit1.pas=C:\sistemas\Gestor_Aluguel\unitImovel.pas</Transaction>
-    <Transaction>2016/03/28 16:33:06.000.768,C:\sistemas\Gestor_Aluguel\Unit1.dfm=C:\sistemas\Gestor_Aluguel\unitImovel.dfm</Transaction>
+    <Transaction>2016/03/28 16:33:06.000.768,C:\sistemas\Gestor_Aluguel\unitImovel.pas=C:\sistemas\Gestor_Aluguel\Unit1.pas</Transaction>
+    <Transaction>2016/03/28 16:33:06.000.768,C:\sistemas\Gestor_Aluguel\unitImovel.dfm=C:\sistemas\Gestor_Aluguel\Unit1.dfm</Transaction>
+    <Transaction>2016/06/14 08:05:41.122,=C:\sistemas\Gestor_Aluguel\Unit1.pas</Transaction>
+    <Transaction>2016/06/14 08:07:23.987,C:\sistemas\Gestor_Aluguel\unitCadImovel.pas=C:\sistemas\Gestor_Aluguel\Unit1.pas</Transaction>
+    <Transaction>2016/06/14 08:07:23.987,C:\sistemas\Gestor_Aluguel\unitCadImovel.dfm=C:\sistemas\Gestor_Aluguel\Unit1.dfm</Transaction>
+    <Transaction>2016/06/14 14:34:36.467,=C:\sistemas\Gestor_Aluguel\Unit1.pas</Transaction>
+    <Transaction>2016/06/14 14:35:32.597,C:\sistemas\Gestor_Aluguel\unitLocatario.pas=C:\sistemas\Gestor_Aluguel\Unit1.pas</Transaction>
+    <Transaction>2016/06/14 14:35:32.612,C:\sistemas\Gestor_Aluguel\unitLocatario.dfm=C:\sistemas\Gestor_Aluguel\Unit1.dfm</Transaction>
+    <Transaction>2016/06/14 14:44:04.540,=C:\sistemas\Gestor_Aluguel\Unit1.pas</Transaction>
+    <Transaction>2016/06/14 14:44:54.390,C:\sistemas\Gestor_Aluguel\unitCadLocatario.dfm=C:\sistemas\Gestor_Aluguel\Unit1.dfm</Transaction>
+    <Transaction>2016/06/14 14:44:54.390,C:\sistemas\Gestor_Aluguel\unitCadLocatario.pas=C:\sistemas\Gestor_Aluguel\Unit1.pas</Transaction>
+    <Transaction>2016/06/14 16:59:52.725,C:\sistemas\Gestor_Aluguel\unitLocatario.pas=</Transaction>
+    <Transaction>2016/06/14 16:59:52.910,C:\sistemas\Gestor_Aluguel\unitCadLocatario.pas=</Transaction>
+    <Transaction>2016/06/14 17:00:42.504,=C:\sistemas\Gestor_Aluguel\unitCadLocatario.pas</Transaction>
+    <Transaction>2016/06/14 17:00:42.546,=C:\sistemas\Gestor_Aluguel\unitLocatario.pas</Transaction>
   </Transactions>
 </BorlandProject>
