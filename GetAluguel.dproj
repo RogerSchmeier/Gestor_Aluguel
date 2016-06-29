@@ -71,9 +71,10 @@
         <DCC_RemoteDebug>true</DCC_RemoteDebug>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <DCC_DcuOutput>C:\sistemas\Gestor_Aluguel\</DCC_DcuOutput>
         <Debugger_IncludeSystemVars>true</Debugger_IncludeSystemVars>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <DCC_ExeOutput>C:\sistemas\Gestor_Aluguel\</DCC_ExeOutput>
+        <DCC_ExeOutput>C:\sistemas\Gestor_Aluguel\app\</DCC_ExeOutput>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
     </PropertyGroup>
@@ -114,6 +115,14 @@
         </DCCReference>
         <DCCReference Include="unitLocatario.pas">
             <Form>frmlocatario</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="unitLocacoes.pas">
+            <Form>frmLocacoes</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="unitCadLocacoes.pas">
+            <Form>frmCadLocacoes</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
@@ -171,7 +180,7 @@
                 </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="1">
-                <DeployFile LocalName="GetAluguel.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="app\GetAluguel.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>GetAluguel.exe</RemoteName>
                         <Overwrite>true</Overwrite>
@@ -553,11 +562,11 @@
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
-                <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>
-                <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="iOSSimulator" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>
             </Deployment>

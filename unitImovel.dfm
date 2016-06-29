@@ -25,7 +25,8 @@ object frmImovel: TfrmImovel
     Width = 669
     Height = 262
     Align = alCustom
-    DataSource = DM.dsImovel
+    DataSource = DM.DSconsulta
+    Enabled = False
     FixedColor = clWhite
     GradientEndColor = clAqua
     Font.Charset = DEFAULT_CHARSET
@@ -103,6 +104,7 @@ object frmImovel: TfrmImovel
     Height = 21
     TabOrder = 4
     TextHint = 'Realizar Consultas'
+    OnChange = edtConsultaChange
   end
   object btnSair: TBitBtn
     Left = 8
@@ -132,6 +134,7 @@ object frmImovel: TfrmImovel
     Height = 17
     Caption = 'Exibir Todos os Cadastros'
     TabOrder = 7
+    OnClick = CBCadastrosClick
   end
   object btnProximo: TBitBtn
     Left = 720

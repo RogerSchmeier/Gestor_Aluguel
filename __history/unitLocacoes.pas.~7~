@@ -1,0 +1,48 @@
+unit unitLocacoes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, unitImovel, Data.DB, Vcl.StdCtrls,
+  Vcl.ExtCtrls, Vcl.Buttons, Vcl.Grids, Vcl.DBGrids;
+
+type
+  TfrmLocacoes = class(TfrmImovel)
+    procedure btnNovoClick(Sender: TObject);
+    procedure btnEditarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmLocacoes: TfrmLocacoes;
+
+implementation
+
+{$R *.dfm}
+
+uses unitDM, unitCadLocacoes;
+
+procedure TfrmLocacoes.btnEditarClick(Sender: TObject);
+begin
+  if frmCadLocacoes=nil then
+  frmCadLocacoes.Create(self);
+  frmCadLocacoes.Show;
+  dm.tblLocacao.Edit;
+
+end;
+
+procedure TfrmLocacoes.btnNovoClick(Sender: TObject);
+begin
+  if  frmCadLocacoes=nil then
+  frmCadLocacoes.Create(self);
+  frmCadLocacoes.Show;
+  dm.tblLocacao.Append;
+
+
+end;
+
+end.

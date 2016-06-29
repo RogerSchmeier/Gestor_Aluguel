@@ -9,7 +9,9 @@ uses
   Vcl.Styles,
   unitCadImovel in 'unitCadImovel.pas' {frmCadImovel},
   unitCadLocatario in 'unitCadLocatario.pas' {frmCadLocatario},
-  unitLocatario in 'unitLocatario.pas' {frmlocatario};
+  unitLocatario in 'unitLocatario.pas' {frmlocatario},
+  unitLocacoes in 'unitLocacoes.pas' {frmLocacoes},
+  unitCadLocacoes in 'unitCadLocacoes.pas' {frmCadLocacoes};
 
 {$R *.res}
 

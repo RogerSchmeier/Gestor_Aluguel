@@ -1,6 +1,5 @@
 inherited frmlocatario: Tfrmlocatario
   Caption = 'Locat'#225'rio'
-  ExplicitLeft = -34
   PixelsPerInch = 96
   TextHeight = 13
   inherited gridImovel: TDBGrid

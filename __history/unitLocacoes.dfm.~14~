@@ -1,0 +1,49 @@
+inherited frmLocacoes: TfrmLocacoes
+  Caption = 'Loca'#231#245'es'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited gridImovel: TDBGrid
+    DataSource = DM.dsLocacao
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'locatario_id'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'imovel_id'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'valor'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'prazo'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'DataInicio'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'DataFinal'
+        Visible = True
+      end>
+  end
+  inherited RgParametros: TRadioGroup
+    Items.Strings = (
+      'Locat'#225'rio'
+      'Im'#243'vel')
+  end
+end
